@@ -64,9 +64,9 @@
         p1= Number(p1.value)
         p2= String(p2.value)
         p3= String(p3.value)
-        p1===9?s+=1:s=s
-        p2=='felicidade'?s+=1:s=s
-        p3=='feliz 5 messes de namoro'?s+=1:s=s
+        p1===15?s+=1:s=s
+        toUpperCase(p2)=='FELICIDADE'?s+=1:s=s
+        toUpperCase(p3)=='FELIZ 5 MESSES DE NAMORO'?s+=1:s=s
         if (s==3){
             open("vide.html")
         }
