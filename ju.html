@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=2, initial-scale=1.0">
+    <title>jujuba</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<style>
+    body{
+        background-color: red;
+        color: wheat;
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+
+    }
+    #deco{
+        font-size: 20vh;
+        text-align: center;
+        margin-bottom: 0pc;
+    }
+    #titulo{
+        text-align: center;
+    }
+    section{
+        width: 100px;
+        height: 200px;
+        margin: auto;
+        text-align: center;
+    }
+    #sim,#nao{
+    
+        text-align: center;
+
+        width: 3vw;
+        height: 4vh;
+    }
+</style>
+<body>
+    <h1 id="deco">??</h1>
+    <h1 id="titulo">teremos 5 filhoss e 10 cachoros ?</h1>
+    <section >
+        <input type="button" value="Sim" id="sim" onclick="ativar(0)">
+        <input type="button" value="Não" id="nao" onclick="ativar(0)">
+    </section>
+    </body>
+<script>
+    function ativar(s){
+        mensagem=['tente de novo','acho que não foi','não entendi','conexão perdida','sua internet está fraca','Erro de conexão com o servidor','Tente novamente mais tarde','Senha incorreta','Verifique e tente novamente','Arquivo não encontrado','Verifique o caminho e tente novamente','Permissão negada','Você não tem acesso a este recurso','Tempo de resposta expirado','Aguarde e tente novamente','Entrada inválida','Por favor, insira dados corretos','Falha na autenticação','Verifique suas credenciais','Recurso indisponível','Por favor, tente novamente mais tarde','Erro ao processar solicitação','Tente novamente mais tarde','Serviço temporariamente fora do ar','Aguarde e tente novamente','Número de telefone inválido','Verifique e insira um número válido','Não foi possível completar a transação','Tente novamente ou entre em contato com o suporte','Senha muito curta','Escolha uma senha mais longa','Email já cadastrado','Use um endereço de email diferente','Erro desconhecido','Entre em contato com o suporte','Falha ao carregar página','Tente recarregar a página','Dados insuficientes','Preencha todos os campos obrigatórios','Ação não permitida','Você não tem permissão para realizar esta ação']
+        if (s==0){
+            var quantidade= mensagem.length
+            var sorteado=sort(0,quantidade-1)
+            alert(`${mensagem[sorteado]}`)
+        }else if(s==1){
+            open('premio.html')
+        }
+    }
+
+
+    function sort(min,max){
+        var numero= Math.floor(Math.random()*(max-min+1))+min
+        return numero
+    }
+</script>
+</html>
